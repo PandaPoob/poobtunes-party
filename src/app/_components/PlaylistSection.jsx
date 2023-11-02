@@ -4,9 +4,9 @@ function PlaylistSection({ playlist }) {
   return (
     <section>
       {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <h2>Poob's playlist</h2>
+      <h2 className="font-display">Poob's playlist</h2>
       <div>
-        {playlist?.map((video) => (
+        {playlist.map((video) => (
           <VideoCard key={video.id} {...video} />
         ))}
       </div>

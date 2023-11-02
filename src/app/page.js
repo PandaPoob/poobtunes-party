@@ -1,7 +1,11 @@
 import Image from "next/image";
-//playlistId=PLdXN83f-XJjINygDBKtexm9BiMGqSyOEs
 import { YT_PLAYLIST_API, PLAYLIST_TEST_ID } from "./variables";
 import PlaylistSection from "./_components/PlaylistSection";
+import Intro from "./_components/Intro";
+
+export const metadata = {
+  title: "PoobTunes Party",
+};
 
 async function getData() {
   try {
@@ -18,13 +22,14 @@ async function HomePage() {
   const playlistData = await getData();
   console.log("HERE", playlistData);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {playlistData ? (
+    <div className="flex min-h-screen flex-col items-center justify-between p-24">
+      <Intro />
+      {!playlistData.error ? (
         <PlaylistSection playlist={playlistData.items} />
       ) : (
-        <p>loading</p>
+        <p>Error occurred</p>
       )}
-    </main>
+    </div>
   );
 }
 
