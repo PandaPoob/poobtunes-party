@@ -23,8 +23,10 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
+        //background: ;
+
         "gradient-brand":
-          "linear-gradient(to bottom right, #FF00C1 0%, #7000FF 50%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #FF00C1 0%, #7000FF 50%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #FF00C1 0%, #7000FF 50%) top left / 50% 50% no-repeat, linear-gradient(to top right, #FF00C1 0%, #7000FF 50%) top right / 50% 50% no-repeat",
+          "linear-gradient(88deg, #FF00C1 -12.64%, #7000FF 106.05%)",
         "btn-gradient":
           "linear-gradient(90deg, rgba(85, 85, 97, 0.60) 0%, #2F2F33 90%)",
       },
@@ -33,6 +35,14 @@ module.exports = {
       fontFamily: {
         display: "var(--display-font)",
         body: "var(--body-font)",
+      },
+      typography: {
+        "webkit-background-clip-text": {
+          css: {
+            "-webkit-background-clip": "text",
+            color: "transparent",
+          },
+        },
       },
     },
   },

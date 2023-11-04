@@ -22,7 +22,7 @@ async function HomePage() {
   const playlistData = await getData();
   console.log("HERE", playlistData);
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
+    <div className="flex min-h-screen flex-col items-center justify-between">
       <Intro />
       {!playlistData.error ? (
         <PlaylistSection playlist={playlistData.items} />
