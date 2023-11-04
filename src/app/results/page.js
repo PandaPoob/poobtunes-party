@@ -3,6 +3,7 @@ import { useSearchParams } from "next/navigation";
 import { YT_SEARCH_API } from "../variables";
 import { useState, useEffect } from "react";
 import SearchResults from "../_components/SearchResults";
+import { SessionProvider } from "next-auth/react";
 
 function ResultsPage() {
   const searchParams = useSearchParams();
@@ -29,7 +30,9 @@ function ResultsPage() {
   return (
     <div>
       {searchResults ? (
-        <SearchResults searchResults={searchResults} />
+        <SessionProvider>
+          <SearchResults searchResults={searchResults} />
+        </SessionProvider>
       ) : (
         <p>loading</p>
       )}
