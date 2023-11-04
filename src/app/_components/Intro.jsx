@@ -13,7 +13,7 @@ function Intro() {
             PoobTunes Party
           </span>
         </h1>
-        <Link href={"/#playlist"} className="mt-10">
+        <Link href={"/#playlist"} className="mt-10 animate-bounce">
           <svg
             width="56"
             height="30"
@@ -34,8 +34,8 @@ function Intro() {
                 y2="-3.87742"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#FF00C1" />
-                <stop offset="1" stop-color="#7000FF" />
+                <stop stopColor="#FF00C1" />
+                <stop offset="1" stopColor="#7000FF" />
               </linearGradient>
             </defs>
           </svg>

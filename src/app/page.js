@@ -10,7 +10,7 @@ export const metadata = {
 async function getData() {
   try {
     const res = await fetch(
-      `${YT_PLAYLIST_API}?part=snippet&playlistId=${PLAYLIST_TEST_ID}&key=${process.env.YOUTUBE_API_KEY}`
+      `${YT_PLAYLIST_API}?part=snippet&playlistId=${PLAYLIST_TEST_ID}&key=${process.env.NEXT_PUBLIC_YOUTUBE_API_KEY}`
     );
     return res.json();
   } catch (error) {
@@ -20,7 +20,7 @@ async function getData() {
 
 async function HomePage() {
   const playlistData = await getData();
-  console.log("HERE", playlistData);
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-between">
       <Intro />
